@@ -12,11 +12,11 @@ import java.util.List;
 @Service
 public class UserServiceImpl implements UserService{
     @Autowired
-    private UserReposity bookreposity;
+    private UserReposity userReposity;
 
     @Override
     public List<UserEntity> queryAllUser() {
-        List<UserEntity> users = bookreposity.findAll();
+        List<UserEntity> users = userReposity.findAll();
         return users;
     }
 }
