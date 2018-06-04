@@ -6,47 +6,47 @@ import java.util.Objects;
 @Entity
 @Table(name = "problem", schema = "simple_web_note", catalog = "")
 public class ProblemEntity {
-    private int problemId;
-    private String problemName;
-    private Integer userId;
+    private int problemid;
+    private String problemname;
+    private Integer userid;
     private String description;
     private String reason;
     private String subject;
     private String semester;
-    private String addDate;
-    private String latestEditDate;
-    private Integer redoTimes;
+    private String adddate;
+    private String latesteditdate;
+    private Integer redotimes;
     private String answer;
     private String tags;
 
     @Id
-    @Column(name = "problemID")
-    public int getProblemId() {
-        return problemId;
+    @Column(name = "problemid")
+    public int getProblemid() {
+        return problemid;
     }
 
-    public void setProblemId(int problemId) {
-        this.problemId = problemId;
-    }
-
-    @Basic
-    @Column(name = "problemName")
-    public String getProblemName() {
-        return problemName;
-    }
-
-    public void setProblemName(String problemName) {
-        this.problemName = problemName;
+    public void setProblemid(int problemid) {
+        this.problemid = problemid;
     }
 
     @Basic
-    @Column(name = "userID")
-    public Integer getUserId() {
-        return userId;
+    @Column(name = "problemname")
+    public String getProblemname() {
+        return problemname;
     }
 
-    public void setUserId(Integer userId) {
-        this.userId = userId;
+    public void setProblemname(String problemname) {
+        this.problemname = problemname;
+    }
+
+    @Basic
+    @Column(name = "userid")
+    public Integer getUserid() {
+        return userid;
+    }
+
+    public void setUserid(Integer userid) {
+        this.userid = userid;
     }
 
     @Basic
@@ -90,33 +90,33 @@ public class ProblemEntity {
     }
 
     @Basic
-    @Column(name = "addDate")
-    public String getAddDate() {
-        return addDate;
+    @Column(name = "adddate")
+    public String getAdddate() {
+        return adddate;
     }
 
-    public void setAddDate(String addDate) {
-        this.addDate = addDate;
-    }
-
-    @Basic
-    @Column(name = "latestEditDate")
-    public String getLatestEditDate() {
-        return latestEditDate;
-    }
-
-    public void setLatestEditDate(String latestEditDate) {
-        this.latestEditDate = latestEditDate;
+    public void setAdddate(String adddate) {
+        this.adddate = adddate;
     }
 
     @Basic
-    @Column(name = "redoTimes")
-    public Integer getRedoTimes() {
-        return redoTimes;
+    @Column(name = "latesteditdate")
+    public String getLatesteditdate() {
+        return latesteditdate;
     }
 
-    public void setRedoTimes(Integer redoTimes) {
-        this.redoTimes = redoTimes;
+    public void setLatesteditdate(String latesteditdate) {
+        this.latesteditdate = latesteditdate;
+    }
+
+    @Basic
+    @Column(name = "redotimes")
+    public Integer getRedotimes() {
+        return redotimes;
+    }
+
+    public void setRedotimes(Integer redotimes) {
+        this.redotimes = redotimes;
     }
 
     @Basic
@@ -144,16 +144,16 @@ public class ProblemEntity {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         ProblemEntity that = (ProblemEntity) o;
-        return problemId == that.problemId &&
-                Objects.equals(problemName, that.problemName) &&
-                Objects.equals(userId, that.userId) &&
+        return problemid == that.problemid &&
+                Objects.equals(problemname, that.problemname) &&
+                Objects.equals(userid, that.userid) &&
                 Objects.equals(description, that.description) &&
                 Objects.equals(reason, that.reason) &&
                 Objects.equals(subject, that.subject) &&
                 Objects.equals(semester, that.semester) &&
-                Objects.equals(addDate, that.addDate) &&
-                Objects.equals(latestEditDate, that.latestEditDate) &&
-                Objects.equals(redoTimes, that.redoTimes) &&
+                Objects.equals(adddate, that.adddate) &&
+                Objects.equals(latesteditdate, that.latesteditdate) &&
+                Objects.equals(redotimes, that.redotimes) &&
                 Objects.equals(answer, that.answer) &&
                 Objects.equals(tags, that.tags);
     }
@@ -161,6 +161,6 @@ public class ProblemEntity {
     @Override
     public int hashCode() {
 
-        return Objects.hash(problemId, problemName, userId, description, reason, subject, semester, addDate, latestEditDate, redoTimes, answer, tags);
+        return Objects.hash(problemid, problemname, userid, description, reason, subject, semester, adddate, latesteditdate, redotimes, answer, tags);
     }
 }
