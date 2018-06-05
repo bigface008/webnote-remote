@@ -8,6 +8,7 @@ import com.example.webnote2.model.ProblemEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import net.sf.json.JSONArray;
 
@@ -20,11 +21,9 @@ public class AllController {
     private UserService userService;
     private ProblemService problemService;
 
-    @GetMapping(value = "/all")
-    public List<JSONArray> getAllSource() {
-        List<JSONArray> result = new ArrayList<>();
-        result.add(JSONArray.fromObject(problemService.queryAllProblem()));
-        result.add(JSONArray.fromObject(userService.queryAllUser()));
-        return result;
-    }
+//    @GetMapping(value = "/log")
+//    @ResponseBody
+//    public List<ProblemEntity> log(@RequestParam("name")String name, @RequestParam("password")String password) {
+//
+//    }
 }

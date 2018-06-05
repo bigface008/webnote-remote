@@ -14,6 +14,11 @@ public class UserServiceImpl implements UserService{
     @Autowired
     private UserReposity userReposity;
 
+//    @Override
+//    public UserEntity queryUser(String name, String password) {
+//        List<UserEntity> users = userReposity.
+//    }
+
     @Override
     public List<UserEntity> queryAllUser() {
         List<UserEntity> users = userReposity.findAll();
